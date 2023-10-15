@@ -1,0 +1,58 @@
+QUESTIONS - General autonomous driving questions
+In this part,    some general questions about autonomous driving, both general and specific to formula student, are presented. You should read the relevant parts of the rulebook and beginner's guide to answer some of the questions. Feel free to use the internet.
+
+List some pros and cons of using a stereo camera versus LiDAR versus RADAR for perception. You can research examples from the industry on why do they use specific sensors and not others.
+
+-
+
+
+Stereo cameras are capable of perceiving both color and depth for each pixel. These cameras can be bought plug-and-play solutions (for example Intel RealSense or StereoLabs ZED 2) or self-made using industrial cameras (for example Basler). Computing depth from multiple cameras requires processing, called "depth estimation", which is done onboard on the plug and play solutions. Which solution would you opt for if you had a small team with a short budget? Consider complexity, reliability and cost on your decision.
+
+-
+
+
+In an autonomous car, monitorization and reaction to critical failures are essential to prevent uncontrolled behavior. According to the rulebook and the beginner's guide, what must happen if the car detects a camera and/or LiDAR malfunction? Select the correct option(s), mentioning the relevant rule(s) you found:
+A-Play a sound using the TSAC.
+
+-T 14.11.4 The status “AS Emergency” has to be indicated by an intermittent sound with the following
+parameters:
+• on-/off-frequency: 1 Hz to 5 Hz
+• duty cycle 50 %
+• sound level between 80 dBA and 90 dBA, fast weighting in a radius of 2 m around the
+vehicle.
+• duration between 8 s and 10 s after entering “AS Emergency”
+
+
+C-Activate the EBS.
+
+T 15.3.5 To get to the safe state, the vehicle must perform an autonomous brake maneuver described
+in section T 15.4 and IN 11.2
+
+
+
+
+4-Usually an autonomous driving pipeline is divided into perception, planning and control. Which algorithms are most commonly used by formula student teams on each of these stages? You can research other teams' social media or FSG Academy, for example.
+
+-
+
+
+
+
+PART 2 QUESTIONS
+Camadas Convolucionais para Processamento de Imagens:
+
+Boas para reconhecer padrões locais, como bordas e texturas.
+São invariáveis ​​à tradução, o que significa que podem identificar padrões independentemente da posição na imagem.
+Usam compartilhamento de parâmetros, tornando-as eficientes e fáceis de treinar.
+Possuem conectividade local, capturando a estrutura de características.
+Aprendem representações hierárquicas, de características simples a complexas.
+Menos sensíveis a variações de entrada, como escala ou rotação, tornando-as robustas para tarefas como detecção de objetos e classificação de imagens.
+
+
+Camadas Totalmente Conectadas para Processamento de Imagens:
+
+Conectam cada neurônio a todos os neurônios na camada anterior, integrando informações globais.
+Úteis para tarefas em que o contexto global é crucial, como legendagem de imagens.
+Versáteis e não limitadas a imagens, podem lidar com texto e dados estruturados.
+Podem produzir várias formas de saída, sendo adequadas para muitas tarefas diferentes.
+Na prática, as camadas convolucionais são a escolha principal para a maioria das tarefas de processamento de imagens, porque são altamente eficazes na alavancagem da estrutura das imagens e levam a modelos eficientes. No entanto, a escolha da arquitetura, incluindo a combinação de camadas convolucionais e totalmente conectadas, depende do problema específico e da necessidade de integração de informações globais ou locais.
