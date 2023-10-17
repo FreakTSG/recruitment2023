@@ -3,15 +3,16 @@ In this part,    some general questions about autonomous driving, both general a
 
 List some pros and cons of using a stereo camera versus LiDAR versus RADAR for perception. You can research examples from the industry on why do they use specific sensors and not others.
 
--
+-No contexto da condução autónoma, as câmeras estéreo oferecem percepção de alta resolução de cor e profundidade, mas têm dificuldade em condições adversas, enquanto o LiDAR fornece dados 3D precisos com capacidades de longo alcance e o RADAR destaca-se em condições climáticas adversas, mas tem menor resolução e desafios na classificação de objetos.
 
 
 Stereo cameras are capable of perceiving both color and depth for each pixel. These cameras can be bought plug-and-play solutions (for example Intel RealSense or StereoLabs ZED 2) or self-made using industrial cameras (for example Basler). Computing depth from multiple cameras requires processing, called "depth estimation", which is done onboard on the plug and play solutions. Which solution would you opt for if you had a small team with a short budget? Consider complexity, reliability and cost on your decision.
 
--
+-Num contexto de uma equipe pequena com recursos limitados, optar por uma solução de câmera estéreo plug-and-play, como o Intel RealSense ou o StereoLabs ZED 2, seria a escolha mais pragmática
 
 
 In an autonomous car, monitorization and reaction to critical failures are essential to prevent uncontrolled behavior. According to the rulebook and the beginner's guide, what must happen if the car detects a camera and/or LiDAR malfunction? Select the correct option(s), mentioning the relevant rule(s) you found:
+
 A-Play a sound using the TSAC.
 
 -T 14.11.4 The status “AS Emergency” has to be indicated by an intermittent sound with the following
