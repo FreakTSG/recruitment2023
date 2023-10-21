@@ -13,15 +13,6 @@ Stereo cameras are capable of perceiving both color and depth for each pixel. Th
 
 In an autonomous car, monitorization and reaction to critical failures are essential to prevent uncontrolled behavior. According to the rulebook and the beginner's guide, what must happen if the car detects a camera and/or LiDAR malfunction? Select the correct option(s), mentioning the relevant rule(s) you found:
 
-A-Play a sound using the TSAC.
-
--T 14.11.4 The status “AS Emergency” has to be indicated by an intermittent sound with the following
-parameters:
-• on-/off-frequency: 1 Hz to 5 Hz
-• duty cycle 50 %
-• sound level between 80 dBA and 90 dBA, fast weighting in a radius of 2 m around the
-vehicle.
-• duration between 8 s and 10 s after entering “AS Emergency”
 
 
 C-Activate the EBS.
