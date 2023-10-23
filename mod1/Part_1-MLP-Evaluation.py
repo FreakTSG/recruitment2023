@@ -2,6 +2,7 @@ import torch
 import torchvision
 from torch.utils.data import DataLoader
 import torch.nn.functional
+import torchvision.models as models
 
 
 training_set: torch.utils.data.Dataset = torchvision.datasets.MNIST("./data", train=True, download=True, transform=torchvision.transforms.ToTensor())
@@ -45,3 +46,5 @@ LOGGING_INTERVAL=100
 
 #utils.train_model(model1, MLP_EPOCHS, mlp_optimizer, mlp_loss_fn, mlp_training_loader, mlp_validation_loader, LOGGING_INTERVAL)
 utils.train_model(model2, MLP_EPOCHS, mlp_optimizer, mlp_loss_fn, mlp_training_loader, mlp_validation_loader, LOGGING_INTERVAL)
+torch.save(model2.state_dict(),'model_weights.pth')
+torch.save(model2, 'model.pth')
